@@ -1,42 +1,54 @@
-import React from 'react';
-// import './Header.css';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
-
-// import { HashLink } from 'react-router-hash-link';
-// import useAuth from '../../../hooks/useAuth';
-// import { Box } from '@mui/material';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Header = () => {
-    // const { user, logOut } = useAuth();
+
     return (
-        <>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <a class="navbar-brand" href="#">Hidden brand</a>
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-                </div>
-            </nav>
-        </>
+        <Navbar bg="light" expand="lg">
+            <Container fluid>
+                <Navbar.Brand href="#">LACE BD</Navbar.Brand>
+                <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Collapse id="navbarScroll">
+                    <Nav
+                        className="me-auto my-2 my-lg-0"
+                        style={{ maxHeight: '100px' }}
+                        navbarScroll
+                    >
+                        <Nav.Link href="#action1">Home</Nav.Link>
+                        <Nav.Link href="#action1">Products</Nav.Link>
+                        <Nav.Link href="#action1"></Nav.Link>
+                        <Nav.Link href="#action2">Sports</Nav.Link>
+                        <NavDropdown title="Catagories" id="navbarScrollingDropdown">
+                            <NavDropdown.Item href="#action3">Bags</NavDropdown.Item>
+                            <NavDropdown.Item href="#action4">
+                                Jersey
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action5">
+                                Shoes
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link href="#action2">About Us</Nav.Link>
+                        <Nav.Link href="#" disabled>
+                            Link
+                        </Nav.Link>
+                    </Nav>
+                    <Form className="d-flex">
+                        <Form.Control
+                            type="search"
+                            placeholder="Search"
+                            className="me-2"
+                            aria-label="Search"
+                        />
+                        <Button variant="outline-success">Search</Button>
+                    </Form>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 };
 
