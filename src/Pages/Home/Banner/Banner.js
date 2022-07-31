@@ -57,9 +57,9 @@ const Banner = () => {
                         <h1 className='mt-3 mb-3'>Welcome to LACE</h1>
                         <div style={{ textAlign: 'left', }}>
 
-                            <h4>Unlimited use of the Quik app</h4>
-                            <h4>Up to 50% off at GoPro.com</h4>
-                            <h4>Guaranteed camera replacement</h4>
+                            <h4>Get 10% discount on your first 3 orders</h4>
+                            <h4>Up to 30% off for Showpnil Bhai</h4>
+                            <h4>Guaranteed 100% discount if authentic desher khobor is provided</h4>
                             <h4>Unlimited cloud 100% quality</h4>
 
                         </div>

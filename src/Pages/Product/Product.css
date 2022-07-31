@@ -1,0 +1,11 @@
+.cart-container {
+    background-color: rgb(254, 254, 254);
+    border-radius: 10px;
+    height: 400px;
+}
+
+.card img {
+    width: 80%;
+    height: 150px;
+    border-radius: 10px;
+}
